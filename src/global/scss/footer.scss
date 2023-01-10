@@ -1,0 +1,61 @@
+@import '../../global/scss/common/_variable';
+
+footer{
+    background-color: $g-main;
+    padding: $g-gap-m;
+    color: $g-white;
+    margin-top: $g-gap-div-m;
+
+    @include g-mobile(){
+        display: none;
+    }
+}
+
+.f-content{
+    padding: 60px 0 120px;
+    display: flex;
+
+    .f-content-left{
+        flex: 0 0 80%;
+        max-width: 80%;
+        display: flex;
+    }
+
+    .f-content-right{
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin: 0 auto;
+
+        span{
+            font-size: $g-s-font;
+            line-height: 3;
+            text-align: center;
+            display: block;
+        }
+        
+        .f-qrcode{
+            max-width: 120px;
+            margin: 0 auto;
+        }
+    }
+
+    h6{
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: $g-gap-s;
+    }
+
+    ul{
+        font-size: $g-m-font;
+
+        li{
+            padding: $g-gap-ss 0;
+        }
+    }
+    
+}
+
+.f-copyright{
+    font-size: $g-s-font;
+    text-align: center;
+}

@@ -1,0 +1,87 @@
+@import '../../global/scss/common/_variable';
+
+.si-center {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 30px;
+    padding: 0 4px;
+}
+
+.si-title {
+    width: 100%;
+    display: flex;
+    margin-bottom: $g-gap-ss;
+
+    .si-title-img {
+        width: 90px;
+    }
+
+    h4 {
+        margin: auto 0;
+        margin-bottom: 0;
+    }
+}
+
+
+.si-form{
+
+    hr{
+        margin: $g-gap-xl 0;
+    }
+
+    .si-little-center{
+        text-align: center;
+        font-size: $g-s-font;
+        width: 100%;
+        display: block;
+        margin-bottom: $g-gap-m;
+    }
+
+}
+
+.si-underlink{
+    font-size: $g-m-font;
+    color: $g-middle-gray;
+}
+
+.si-question{
+    margin: 20px 0;
+
+    .si-check{
+        display: flex;
+        font-size: $g-s-font;
+        margin-bottom: 20px;
+        
+        span{
+            display: block;
+            margin: auto 0;
+            margin-left: $g-gap-m;
+        }
+    }
+}
+
+.si-col{
+    flex: 1 0 50%;
+    max-width: 50%;
+    text-align: left;
+
+    @include g-mobile(){
+        flex: 1 0 100%;
+    max-width: 100%;
+    }
+}
+
+.si-signfail-modal{
+    min-height: 30px;
+    padding: $g-gap-xm;
+}
+
+.si-text{
+    margin-top: $g-gap-m;
+}
+
+.si-text-info{
+    margin-top: $g-gap-m;
+    font-size: $g-m-font;
+}
+

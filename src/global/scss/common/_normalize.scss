@@ -1,0 +1,356 @@
+@import '_variable';
+
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: $g-white-gray;
+  color: $g-black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2;
+
+
+  @include g-pad() {
+      font-size: 0.875rem;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 1.125rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 1rem;
+  }
+}
+
+h6 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 0.875rem;
+  }
+
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+
+  @include g-pad() {
+      font-size: 0.875rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+
+  &.g-s-link{
+    font-size: $g-s-font;
+
+    .material-icons{
+      font-size: $g-s-font;
+    }
+  }
+
+  &.g-m-link{
+    font-size: $g-m-font;
+
+    .material-icons{
+      font-size: $g-m-font;
+    }
+  }
+
+  &.g-main-link{
+    color: $g-main;
+
+    &:hover{
+      color: $g-light-main;
+    }
+  }
+
+  &.g-blue-link{
+    color: $g-blue;
+
+    &:hover{
+      color: $g-pale-blue;
+    }
+  }
+
+  &.g-white-link{
+
+    &:hover{
+      color: $g-dark;
+    }
+  }
+
+  &.g-underline{
+    text-decoration: underline;
+  }
+
+
+  &.g-withicon{
+    display: flex;
+
+    svg{
+      width: 16px;
+      margin: auto 0;
+      margin-right: 4px;
+    }
+
+  }
+
+}
+
+hr {
+  border: 1px solid inherit;
+  margin: 0;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+ul,ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li {
+  list-style: none;
+}
+
+main {
+  display: block;
+}
+
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+  width: 100%;
+  display: block;
+}
+
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+
+progress {
+  vertical-align: baseline;
+}
+
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+
+details {
+  display: block;
+}
+
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $g-gray;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+@include g-mobile() {
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    opacity: 0;
+    border-radius: 10px;
+  }
+
+}
+

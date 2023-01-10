@@ -1,0 +1,441 @@
+.g-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+
+.g-content {
+    margin: 30px auto;
+    position: relative;
+    flex: 1 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+//position
+.g-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    position: relative;
+
+    @include g-mobile() {
+        padding-bottom: 100px;
+    }
+}
+
+.g-main-layout {
+    margin-top: 20px;
+
+    @include g-mobile() {
+        margin-top: 0px;
+    }
+}
+
+.g-wrapper {
+    margin-top: 30px;
+    padding: 0 $g-gap-m;
+
+    @include g-mobile() {
+        margin-top: 0px;
+        padding: 0 $g-gap-s;
+
+        &.no-padding-mobile{
+            padding: 0;
+        }
+    }
+}
+
+
+.fas,
+.fab,
+.fa {
+    margin: auto;
+}
+
+//display
+.g-d-flex {
+    display: flex;
+}
+
+.g-d-block {
+    display: block;
+}
+
+.g-fl-auto {
+    flex: auto;
+}
+
+.g-d-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.g-d-none {
+    display: none;
+}
+
+//margin
+
+.g-m-auto {
+    margin: auto;
+}
+
+.g-m-auto-v {
+    margin: auto 0;
+}
+
+.g-m-auto-h {
+    margin: 0 auto;
+}
+
+.g-mt-10 {
+    margin-top: 10px;
+}
+
+.g-mt-20 {
+    margin-top: 20px;
+}
+
+.g-mt-30 {
+    margin-top: 30px;
+}
+
+.g-mb-30 {
+    margin-bottom: 30px;
+}
+
+.g-m-minus {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+//divs
+.g-regular-div {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+//padding
+.g-padding {
+    padding: 1rem;
+}
+
+.g-padding-v {
+    padding: 1rem 0;
+}
+
+.g-padding-h {
+    padding: 0 1rem;
+}
+
+
+
+//drop
+.g-normal-filter {
+    position: relative;
+
+    .g-filter-inner {
+        position: absolute;
+        top: 100%;
+        background-color: $g-white;
+        border-radius: 0.5rem;
+        min-width: 10rem;
+        z-index: 9999;
+        display: none;
+        box-shadow: $g-shadow-white;
+        animation-name: g-dropdownslide;
+        animation-duration: 0.25s;
+        margin-top: 1rem;
+
+
+        &.is-open {
+
+            .g-filter-inner {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.g-breadcrumb {
+    color: $g-middle-gray;
+    font-size: $g-m-font;
+
+    @include g-mobile() {
+        display: none;
+    }
+
+    a {
+        &.current {
+            font-weight: bold;
+            color: $g-main;
+        }
+    }
+}
+
+//process
+.g-process {
+    margin-bottom: $g-gap-l;
+
+    @include g-mobile() {
+        padding: $g-gap-m;
+        margin-bottom: $g-gap-s;
+    }
+
+    ul {
+        display: flex;
+        // width: 60%;
+        // justify-content: space-between;
+
+        @include g-mobile() {
+            justify-content: space-between;
+
+        }
+
+        li {
+            position: relative;
+            padding-left: $g-gap-l;
+            display: inline-block;
+            padding-right: 100px;
+            color: $g-middle-gray;
+
+            &::after {
+                content: attr(data-step);
+                background-color: $g-middle-gray;
+                color: $g-white;
+                width: 20px;
+                height: 20px;
+                border-radius: 99em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+            }
+
+            @include g-mobile() {
+                padding: 0;
+
+                &::after{
+                    display: none;
+                }
+            }
+            
+
+            &:not(:first-of-type) {
+
+                &::before {
+                    content: '';
+                    background-color: $g-middle-gray;
+                    width: 60px;
+                    height: 0.5px;
+                    position: absolute;
+                    top: 50%;
+                    left: -10%;
+                    transform: translate(-100%, -50%);
+
+                    @include g-mobile() {
+                        width: 30px;
+                        left: -14%;
+                    }
+
+                }
+            }
+
+            
+
+            &.active {
+                color: $g-main;
+
+                &::after {
+                    background-color: $g-main;
+                }
+            }
+        }
+    }
+}
+
+.g-process-track {
+    text-align: center;
+    padding: $g-gap-m $g-gap-l;
+
+    ul {
+        display: inline-flex;
+        justify-content: center;
+        position: relative;
+
+
+        li {
+            position: relative;
+            display: inline-block;
+            color: $g-middle-gray;
+            font-size: $g-m-font;
+
+            &:not(:last-of-type) {
+                padding-right: 100px;
+
+                &::before {
+                    content: '';
+                    background-color: $g-main;
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    top: 18%;
+                    left: 0%;
+                    transform: translate(15%, -50%);
+                    z-index: 0;
+
+                }
+            }
+
+
+            .g-process-circle {
+                color: $g-main;
+                text-align: center;
+
+                .material-icons {
+                    position: relative;
+                    font-size: 32px;
+                    z-index: 2;
+
+                    &::after {
+                        content: '';
+                        background-color: $g-white;
+                        width: 26px;
+                        height: 26px;
+                        border-radius: 99em;
+                        position: absolute;
+                        top: 9%;
+                        left: 9%;
+                        z-index: -1;
+                    }
+
+                }
+
+
+            }
+
+            .g-process-date,
+            .g-process-time {
+                font-size: $g-s-font;
+            }
+
+
+
+        }
+    }
+
+    @include g-mobile() {
+        padding: 0;
+
+
+        ul {
+            width: 100%;
+            justify-content: space-between;
+
+            li {
+                font-size: $g-s-font;
+
+                &:not(:last-of-type) {
+                    padding-right: 0;
+                    flex: 1 0 auto;
+
+                    &::before {
+                        top: 15%;
+                        left: 0%;
+                        transform: translate(57%, -50%);
+    
+                    }
+                }
+
+                .g-process-circle {
+
+                    .material-icons {
+                        font-size: 20px;
+
+                        &::after {
+                            width: 17px;
+                            height: 17px;
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+    }
+
+}
+
+.g-google-map {
+    padding: $g-gap-m;
+    max-height: 100%;
+
+    @include g-mobile() {
+        display: none;
+    }
+}
+
+.g-pagination{
+    display: flex;
+    align-items: center;
+    padding: $g-gap-m;
+    margin-top: $g-gap-xl;
+
+    ul{
+        display: flex;
+        max-width: 200px;
+
+        li{
+            padding: 0 $g-gap-m;
+            cursor: pointer;
+            color: $g-main;
+
+            &.active{
+                position: relative;
+                color: $g-white;
+                z-index: 1;
+
+                &::after{
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    background-color: $g-main;
+                    border-radius: 99em;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .g-pagination-action{
+        padding: 0 $g-gap-m;
+        cursor: pointer;
+    }
+
+    .g-pagination-next{
+        color: $g-main;
+    }
+
+    &.is-center{
+        justify-content: center;
+    }
+
+    &.is-end{
+        justify-content: end;
+    }
+}

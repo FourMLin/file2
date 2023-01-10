@@ -1,0 +1,141 @@
+@import '_variable';
+
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+.g-button-link {
+    display: block;
+}
+
+.g-btn{
+    border-radius: 4px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+
+    .material-icons{
+        font-size: $g-m-font;
+    }
+    
+    //type
+    &.g-btn-regular{
+        padding: $g-gap-s $g-gap-m;
+    }
+
+    &.g-btn-big{
+        padding: $g-gap-m;
+    }
+
+    &.g-btn-s{
+        padding: $g-gap-s;
+        font-size: $g-m-font;
+    }
+
+    &.g-btn-ss{
+        padding: $g-gap-ss;
+        font-size: $g-s-font;
+
+        .material-icons{
+            font-size: $g-m-font;
+        }
+    }
+
+    &.g-btn-icon{
+        padding: $g-gap-ss;
+    }
+
+    //radious
+    &.g-btn-round{
+        border-radius: 99em;
+    }
+
+
+    //color
+    &.g-btn-main{
+        background-color: $g-main;
+        color: $g-white;
+
+        &:hover{
+            background-color: $g-dark;
+        }
+    }
+
+    &.g-btn-main-line{
+        background-color: $g-white;
+        color: $g-main;
+        border: 1px solid $g-main;
+
+        &:hover{
+            background-color: $g-white-gray;
+        }
+    }
+
+    &.g-btn-main-gradient{
+        background: $g-liner-gradient-purple;
+        color: $g-white;
+
+        &:hover{
+            background-color: $g-light-main;
+        }
+    }
+
+    &.g-btn-gray{
+        background-color: $g-middle-gray;
+        color: $g-white;
+    }
+
+    &.g-btn-gray-line{
+        border: 2px solid $g-gray;
+        color: $g-gray;
+        background-color: $g-white;
+
+        &:hover{
+            background-color: $g-white-gray;
+        }
+    }
+
+    &.g-btn-white{
+        background-color: $g-white;
+        color: $g-main;
+
+        &:hover{
+            background-color: $g-dark;
+        }
+    }
+
+    &.g-btn-white-line{
+        border: 2px solid $g-white;
+        color: $g-white;
+
+        &:hover{
+            background-color: $g-dark;
+        }
+    }
+}

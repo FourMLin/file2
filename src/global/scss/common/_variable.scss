@@ -1,0 +1,131 @@
+//color
+$g-main: #A2007D;
+$g-light-main: #C55AA8;
+$g-dark: #330627;
+$g-pale-main: #FEF6F9;
+$g-white-main: #EED0E6;
+
+// lebal
+$g-orange:#FF4000;
+$g-orange-dark:#BE3D0C;
+$g-pale-orange:#FFFAF5;
+
+//price
+$g-price-red:#FA1229;
+$g-pale-red: #F34F59;
+$g-light-red:#FEECEA;
+
+//other
+$g-yellow:#FF9E29;
+$g-pale-yellow: #FFF9D9;
+$g-white-yellow: #FFF4CE;
+$g-dark-yellow: #7D651C;
+
+$g-blue:#0D6EFD;
+$g-pale-blue:#a4c7fa;
+$g-mist-blue:#505D7D;
+$g-mist-pale-blue:#EDEFF2;
+$g-mist-dark-blue:#212529;
+
+$g-nile:#2AA8C3;
+$g-pale-nile:#EAF6F9;
+
+$g-green:#198754;
+$g-light-green:#569E34;
+$g-pale-green:#EEF5EB;
+
+$g-purple:#894ED3;
+$g-pale-purple:#F3EDFB;
+
+$g-pale-brown:#EBDECC;
+$g-yellow-brown:#9D5D00;
+
+$g-white: #FFFFFF;
+$g-snow-white: #FBFBFB;
+$g-white-gray: #F0f0f0;
+$g-pale-gray: #E5E5E5;
+$g-gray: #C4C4C4;
+$g-light-gray: #9E9E9E;
+$g-middle-gray: #828282;
+$g-dark-gray: #515151;
+$g-murk-gray: #404040;
+$g-deep-gray: #2A2A2A;
+$g-black: #1E1E1E;
+$g-real-black: #000000;
+
+$g-liner-gradient-purple: linear-gradient(#BC429B, #A2007D);
+
+$g-s-font: 12px;
+$g-m-font: 14px;
+$g-r-font: 16px;
+$g-l-font: 18px;
+$g-xl-font: 20px;
+$g-xx-font: 24px;
+$g-xxl-font: 26px;
+$g-t-font: 30px;
+$g-xt-font: 32px;
+
+$g-gap-xs: 2px;
+$g-gap-ss: 4px;
+$g-gap-s: 8px;
+$g-gap-xm: 12px;
+$g-gap-m: 16px;
+$g-gap-l: 24px;
+$g-gap-xl: 30px;
+$g-gap-xxl: 32px;
+
+
+$g-gap-div-m: 30px;
+
+$g-shadow-white: 0 6px 15px rgba($color: $g-black, $alpha: 0.05);
+$g-shadow-block: 0 2px 4px rgba($color: $g-black, $alpha: 0.2);
+$g-fix-shadow:0 -1px 6px rgba($color: $g-black, $alpha: 0.3);
+
+
+$g-border: 1px solid $g-pale-gray;
+
+$g-pc-media:1200px;
+$g-pad-media:991px;
+$g-mobile-media:576px;
+
+@mixin g-pc() {
+    @media all and (min-width: $g-pc-media) {
+        @content
+    }
+};
+
+@mixin g-underpc() {
+    @media all and (max-width: $g-pc-media) {
+        @content
+    }
+};
+
+@mixin g-pad() {
+    @media all and (max-width: $g-pad-media) {
+        @content
+    }
+};
+
+@mixin g-mobile() {
+    @media all and (max-width: $g-mobile-media) {
+        @content
+    }
+};
+
+//extent
+%row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+// overflow: hidden;
+//     text-overflow: ellipsis;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+
+
+
+
